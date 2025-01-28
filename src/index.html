@@ -1,18 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform - Course Offerings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .course-card h3 {
+            color: #4CAF50;
+        }
+        .course-card p {
+            font-size: 14px;
+            color: #777;
+        }
+        .course-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .promotion-banner {
+            background-color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+    </style>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App by VEDANT SHELAR</h1>
-    
-  </main>
-</body>
+    <header>
+        <h1>E-Learning Platform</h1>
+        <p>Your gateway to online learning and career growth</p>
+    </header>
 
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Promotions</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <!-- Promotion Banner -->
+        <div class="promotion-banner">
+            Limited Time Offer: Get 20% off on all courses!
+        </div>
+
+        <!-- Course Listings -->
+        <div class="course-list">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Learn how to build dynamic websites from scratch using HTML, CSS, JavaScript, and more!</p>
+                <p class="price">$99</p>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Master data analysis, machine learning, and Python programming to become a data scientist.</p>
+                <p class="price">$120</p>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <h3>Digital Marketing</h3>
+                <p>Learn the latest techniques in SEO, social media, and content marketing to grow your business.</p>
+                <p class="price">$89</p>
+                <button>Enroll Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 10px; background-color: #333; color: white;">&copy; 2025 E-Learning Platform. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
