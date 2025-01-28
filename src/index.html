@@ -4,121 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Learning Platform - Course Offerings</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ03QhqLMpG8r+KnujsZFC5wJd1vsSTn5z8fW4qjW6bszZpcBsXkheL5H4jX" crossorigin="anonymous">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .course-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
         }
         .course-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 20px;
-            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .course-card h3 {
-            color: #4CAF50;
-        }
-        .course-card p {
-            font-size: 14px;
-            color: #777;
-        }
-        .course-card .price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #4CAF50;
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
         .promotion-banner {
             background-color: #ffcc00;
-            padding: 10px;
-            text-align: center;
+            padding: 15px;
             font-weight: bold;
             color: #333;
-            margin: 20px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .course-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="bg-success text-white text-center py-5">
         <h1>E-Learning Platform</h1>
         <p>Your gateway to online learning and career growth</p>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Promotions</a>
-        <a href="#">Contact Us</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E-Learning</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Promotions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
+    <div class="container my-5">
         <!-- Promotion Banner -->
-        <div class="promotion-banner">
-            Limited Time Offer: Get 20% off on all courses!
+        <div class="promotion-banner mb-5">
+            <strong>Limited Time Offer: Get 20% off on all courses!</strong>
         </div>
 
         <!-- Course Listings -->
-        <div class="course-list">
-            <div class="course-card">
-                <h3>Web Development</h3>
-                <p>Learn how to build dynamic websites from scratch using HTML, CSS, JavaScript, and more!</p>
-                <p class="price">$99</p>
-                <button>Enroll Now</button>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card course-card shadow-sm border-light rounded">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Web Development Course">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Learn how to build dynamic websites from scratch using HTML, CSS, JavaScript, and more!</p>
+                        <p class="course-price">$99</p>
+                        <a href="#" class="btn btn-success">Enroll Now</a>
+                    </div>
+                </div>
             </div>
-            <div class="course-card">
-                <h3>Data Science</h3>
-                <p>Master data analysis, machine learning, and Python programming to become a data scientist.</p>
-                <p class="price">$120</p>
-                <button>Enroll Now</button>
+            <div class="col">
+                <div class="card course-card shadow-sm border-light rounded">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Data Science Course">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <p class="card-text">Master data analysis, machine learning, and Python programming to become a data scientist.</p>
+                        <p class="course-price">$120</p>
+                        <a href="#" class="btn btn-success">Enroll Now</a>
+                    </div>
+                </div>
             </div>
-            <div class="course-card">
-                <h3>Digital Marketing</h3>
-                <p>Learn the latest techniques in SEO, social media, and content marketing to grow your business.</p>
-                <p class="price">$89</p>
-                <button>Enroll Now</button>
+            <div class="col">
+                <div class="card course-card shadow-sm border-light rounded">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Digital Marketing Course">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Learn the latest techniques in SEO, social media, and content marketing to grow your business.</p>
+                        <p class="course-price">$89</p>
+                        <a href="#" class="btn btn-success">Enroll Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p style="text-align: center; padding: 10px; background-color: #333; color: white;">&copy; 2025 E-Learning Platform. All Rights Reserved.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 E-Learning Platform. All Rights Reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS, Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB3vs4jNfEX8ne3eWnYlqFyNKQjrXWhrkTkQw5WlM0w5y3bzm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0dxH5lL1vptFfX+ofPc3nQjDjiRU9fAkXH/4JPRwFz9g5G58d" crossorigin="anonymous"></script>
 </body>
 </html>
