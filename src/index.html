@@ -13,40 +13,71 @@
     />
     <style>
       body {
-        font-family: "Arial", sans-serif;
-        background-color: #f8f9fa;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f8ff;
+        color: #444;
       }
-      .course-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      header {
+        background-color: #2a4d69;
+        color: white;
       }
-      .course-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      .navbar {
+        background-color: #1c3d5c;
+      }
+      .navbar .nav-link {
+        color: #c1c1c1 !important;
+      }
+      .navbar .nav-link:hover {
+        color: #ffcc00 !important;
       }
       .promotion-banner {
-        background-color: #ffcc00;
-        padding: 15px;
+        background-color: #ff6600;
+        padding: 20px;
         font-weight: bold;
-        color: #333;
-        margin-bottom: 30px;
+        color: white;
+        margin-bottom: 40px;
         text-align: center;
+        border-radius: 5px;
+      }
+      .course-card {
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        background-color: #ffffff;
+      }
+      .course-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       }
       .course-price {
-        font-size: 18px;
-        font-weight: bold;
-        color: #28a745;
+        font-size: 22px;
+        font-weight: 600;
+        color: #e60000;
+      }
+      footer {
+        background-color: #1c3d5c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .btn-custom {
+        background-color: #4CAF50;
+        color: white;
+      }
+      .btn-custom:hover {
+        background-color: #45a049;
       }
     </style>
   </head>
   <body>
-    <header class="bg-success text-white text-center py-5">
-      <h1>E-Learning Platform</h1>
-      <p>Your gateway to online learning and career growth</p>
+    <header class="text-center py-5">
+      <h1>Advanced E-Learning Platform</h1>
+      <p>Unlock your potential with our cutting-edge courses</p>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">E-Learning</a>
+        <a class="navbar-brand text-white" href="#">Learning Hub</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -67,10 +98,10 @@
               <a class="nav-link" href="#">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promotions</a>
+              <a class="nav-link" href="#">Offers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">Support</a>
             </li>
           </ul>
         </div>
@@ -80,7 +111,7 @@
     <div class="container my-5">
       <!-- Promotion Banner -->
       <div class="promotion-banner mb-5">
-        <strong>Limited Time Offer: Get 20% off on all courses!</strong>
+        <strong>Special Offer: 20% off on all courses for the next 48 hours!</strong>
       </div>
 
       <!-- Course Listings -->
@@ -88,47 +119,47 @@
         <div class="col">
           <div class="card course-card shadow-sm border-light rounded">
             <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
+              <h5 class="card-title">Web Development Mastery</h5>
               <p class="card-text">
-                Learn how to build dynamic websites from scratch using HTML,
-                CSS, JavaScript, and more!
+                Learn how to build powerful websites from scratch using HTML,
+                CSS, JavaScript, and modern frameworks like React and Angular.
               </p>
-              <p class="course-price">$99</p>
-              <a href="#" class="btn btn-success">Enroll Now</a>
+              <p class="course-price">$105</p>
+              <a href="#" class="btn btn-custom">Join Now</a>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card course-card shadow-sm border-light rounded">
             <div class="card-body">
-              <h5 class="card-title">Data Science</h5>
+              <h5 class="card-title">Data Science & AI</h5>
               <p class="card-text">
-                Master data analysis, machine learning, and Python programming
-                to become a data scientist.
+                Unlock the secrets of data with Python, machine learning, and
+                deep learning techniques.
               </p>
-              <p class="course-price">$120</p>
-              <a href="#" class="btn btn-success">Enroll Now</a>
+              <p class="course-price">$130</p>
+              <a href="#" class="btn btn-custom">Join Now</a>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card course-card shadow-sm border-light rounded">
             <div class="card-body">
-              <h5 class="card-title">Digital Marketing</h5>
+              <h5 class="card-title">Advanced Digital Marketing</h5>
               <p class="card-text">
-                Learn the latest techniques in SEO, social media, and content
-                marketing to grow your business.
+                Discover the power of SEO, content marketing, and social media
+                strategies to scale your brand.
               </p>
-              <p class="course-price">$89</p>
-              <a href="#" class="btn btn-success">Enroll Now</a>
+              <p class="course-price">$95</p>
+              <a href="#" class="btn btn-custom">Join Now</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2025 E-Learning Platform. All Rights Reserved.</p>
+    <footer>
+      <p>&copy; 2025 Learning Hub. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS, Popper.js -->
